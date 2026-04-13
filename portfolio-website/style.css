@@ -1,0 +1,107 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* Header */
+header {
+  padding: 40px;
+  text-align: center;
+  background: #1e293b;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Skills */
+.skills ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: #1e293b;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* Projects */
+.projects {
+  text-align: center;
+}
+
+.project {
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  display: inline-block;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Links */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.project img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project a {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  background: #3b82f6;
+  border-radius: 6px;
+  color: white;
+}
+
+.project a:hover {
+  background: #2563eb;
+}
