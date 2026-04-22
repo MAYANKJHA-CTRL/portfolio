@@ -8,6 +8,9 @@
 </head>
 
 <body>
+    <div id="cursor"></div>
+    <div id="progress"></div>
+    <div id="tsparticles"></div>
     <nav class="navbar">
         <h2>Mayank</h2>
         <div>
@@ -19,7 +22,7 @@
     </nav>
 
     <header class="hero">
-        <h1>Hi, I'm Mayank 👋</h1>
+        <h1 id="typing"></h1>
         <p>
             I build modern, responsive web applications that solve real-world problems.
         </p>
@@ -29,6 +32,7 @@
             <a href="resume.pdf" class="btn">📄 Resume</a>
         </div>
     </header>
+
 
     <section id="about" class="about fade">
         <h2>About Me</h2>
@@ -66,35 +70,62 @@
     <section id="projects" class="projects fade">
         <h2>Projects</h2>
         <div class="project">
-            <img src="dashboard.png" width="100%">
+            <div class="project-inner">
 
-            <h3>Student Productivity Dashboard</h3>
-            <p>Manage tasks, expenses, and study time with analytics.</p>
 
-            <a href="https://mayankjha-ctrl.github.io/student-productivity-dashboard/" class="btn" target="_blank">
-                Live Demo
-            </a>
+                <img src="dashboard.png" width="100%">
 
-            <a href="https://github.com/MAYANKJHA-CTRL/student-productivity-dashboard" class="btn" target="_blank">
-                GitHub
-            </a>
+                <div class="overlay">
+                    <p>Click to view project 🚀</p>
+                </div>
+
+                <h3>Student Productivity Dashboard</h3>
+                <p>Manage tasks, expenses, and study time with analytics.</p>
+
+                <div class="project-buttons">
+                    <a href="https://mayankjha-ctrl.github.io/student-productivity-dashboard/" target="_blank"
+                        class="btn live">Live Demo</a>
+
+                    <a href="https://github.com/MAYANKJHA-CTRL/student-productivity-dashboard" target="_blank"
+                        class="btn github">GitHub</a>
+                </div>
+            </div>
+
         </div>
-
         <div class="project">
-            <img src="expense.png" width="100%">
+            <div class="project-inner">
 
-            <h3>Expense Tracker</h3>
-            <p>Track daily expenses with total calculation.</p>
 
-            <a href="https://MAYANKJHA-CTRL.github.io/expense-tracker-web/" target="_blank" class="btn">
-                🚀 Live Demo
-            </a>
+                <img src="expense.png" width="100%">
 
-            <a href="https://github.com/MAYANKJHA-CTRL/expense-tracker-web" target="_blank" class="btn">
-                💻 GitHub
-            </a>
+                <h3>Expense Tracker</h3>
+                <p>Track daily expenses with total calculation.</p>
+
+                <div class="project-buttons">
+                    <a href="https://mayankjha-ctrl.github.io/expense-tracker-web/" target="_blank"
+                        class="btn live">Live
+                        Demo</a>
+
+                    <a href="https://github.com/MAYANKJHA-CTRL/expense-tracker-web" target="_blank"
+                        class="btn github">GitHub</a>
+
+                </div>
+            </div>
         </div>
 
+    </section>
+    <section class="fade">
+        <h2>Why Hire Me?</h2>
+        <p>
+            I build real-world projects, focus on clean UI, and continuously improve my skills.
+        </p>
+    </section>
+    <section class="fade">
+        <h2>My Journey</h2>
+        <p>
+            From learning basic HTML to building real-world dashboards,
+            I continuously push myself to create better, faster, and smarter solutions.
+        </p>
     </section>
 
     <section id="contact" class="contact fade">
@@ -112,6 +143,127 @@
     <footer>
         <p>© 2026 Mayank Jha | Built with ❤️</p>
     </footer>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        });
+
+        document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+    </script>
+    <script>
+        document.querySelectorAll('.project').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+            });
+        });
+    </script>
+    <script>
+        const text = "Hi, I'm Mayank 👋";
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 50);
+            }
+        }
+        type();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script>
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: { value: 50 },
+                size: { value: 2 },
+                move: { speed: 1 },
+                links: { enable: true },
+            }
+        });
+    </script>
+    <script>
+        let count = 0;
+        const target = 10;
+        const counter = document.getElementById("counter");
+
+        const interval = setInterval(() => {
+            count++;
+            counter.innerText = count;
+            if (count === target) clearInterval(interval);
+        }, 100);
+    </script>
+    <script>
+        window.addEventListener("scroll", () => {
+            const scroll = window.scrollY;
+            const height = document.body.scrollHeight - window.innerHeight;
+            document.getElementById("progress").style.width = (scroll / height) * 100 + "%";
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".btn").forEach(btn => {
+            btn.addEventListener("mousemove", e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            btn.addEventListener("mouseleave", () => {
+                btn.style.transform = "translate(0,0)";
+            });
+        });
+    </script>
+    <script>
+        const cursor = document.getElementById("cursor");
+
+        document.addEventListener("mousemove", e => {
+            cursor.style.top = e.clientY + "px";
+            cursor.style.left = e.clientX + "px";
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".project").forEach(card => {
+            const inner = card.querySelector(".project-inner");
+
+            card.addEventListener("mousemove", (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const rotateX = -(y - rect.height / 2) / 10;
+                const rotateY = (x - rect.width / 2) / 10;
+
+                inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            card.addEventListener("mouseleave", () => {
+                inner.style.transform = "rotateX(0deg) rotateY(0deg)";
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll(".btn").forEach(btn => {
+            btn.addEventListener("mousemove", e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            btn.addEventListener("mouseleave", () => {
+                btn.style.transform = "translate(0,0)";
+            });
+        });
+    </script>
 
 </body>
 
