@@ -253,10 +253,12 @@ footer {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 .project {
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -266,15 +268,17 @@ footer {
   transition: transform 0.2s ease;
   transform-style: preserve-3d;
 }
+
 .project {
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project:hover {
   box-shadow:
-    0 0 20px rgba(59,130,246,0.4),
-    0 0 60px rgba(59,130,246,0.2);
+    0 0 20px rgba(59, 130, 246, 0.4),
+    0 0 60px rgba(59, 130, 246, 0.2);
 }
+
 h3 {
   transition: 0.3s;
 }
@@ -283,12 +287,49 @@ h3 {
   color: #60a5fa;
   text-shadow: 0 0 10px #3b82f6;
 }
+
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
   border: 3px solid #4ea1ff;
+  z-index: 10;
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .skills ul {
+    flex-wrap: wrap;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    margin: 20px;
+    padding: 40px 20px;
+  }
 }
