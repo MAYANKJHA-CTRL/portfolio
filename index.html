@@ -1,296 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Mayank Jha Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayank Jha | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <div id="cursor"></div>
-    <div id="progress"></div>
-    <div id="tsparticles"></div>
-    <nav class="navbar">
-        <h2>Mayank</h2>
-        <div>
-            <a href="#about" class="btn">About</a>
-            <a href="#skills" class="btn">Skills</a>
-            <a href="#projects" class="btn">Projects</a>
-            <a href="#contact" class="btn">Contact</a>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <img src="myphoto.jpg" class="profile-img">
-        <h1 id="typing"></h1>
-        <p>
-            Aspiring Full Stack Developer passionate about building modern, responsive, and user-friendly web
-            applications using HTML, CSS, JavaScript, and AI-assisted tools.
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
 
-        <div class="hero-buttons">
-            <a href="#projects" class="btn">🚀 View Projects</a>
+<header>
+  <nav class="navbar">
+    <div class="logo">MAYANK.</div>
 
-            <a href="resume.pdf" class="btn">📄 Resume</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-            <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank" class="btn">
-                🔗 LinkedIn
-            </a>
-        </div>
-    </header>
+  <section class="hero">
 
+    <div class="hero-left">
+      <p class="mini-title">AVAILABLE FOR OPPORTUNITIES</p>
 
-    <section id="about" class="about fade">
-        <h2>About Me</h2>
+      <h1>
+        Mayank<br>
+        Jha
+      </h1>
 
-        <p>
-            Hi, I'm Mayank Jha, a Computer Science student and aspiring Full Stack Developer.
+      <h3>Aspiring Full Stack Developer</h3>
 
-            I enjoy creating responsive websites, building real-world projects, and continuously learning modern
-            technologies.
+      <p class="hero-desc">
+        Passionate about building modern responsive web applications with
+        HTML, CSS, JavaScript and AI-assisted development tools.
+      </p>
 
-            Currently, I am improving my skills in frontend development, JavaScript, GitHub, and MERN Stack development.
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary-btn">View Projects</a>
+        <a href="resume.pdf" class="btn secondary-btn" target="_blank">Resume</a>
+      </div>
 
-            This portfolio website was built using AI-assisted development tools along with HTML, CSS, and JavaScript.
-        </p>
-    </section>
-    <section>
-        <h2>What I Do</h2>
-        <p>⚡ Build responsive websites</p>
-        <p>⚡ Create user-friendly UI designs</p>
-        <p>⚡ Develop real-world projects</p>
-    </section>
-    <section class="fade">
-        <h2>Internship</h2>
+      <div class="socials">
+        <a href="https://github.com/MAYANKJHA-CTRL" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
 
-        <p>
-            Currently interning at InAmigos Foundation and working on AI-assisted web development projects and portfolio
-            building.
-        </p>
-    </section>
+    <div class="hero-right">
+      <div class="image-card">
+        <img src="myphoto.jpg" alt="Mayank Jha">
+      </div>
+    </div>
 
-    <section id="skills" class="skills fade">
-        <h2>Skills</h2>
-        <ul>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive Design</li>
-                <li>Git & GitHub</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>MERN Stack (Learning)</li>
-                <li>AI-Assisted Development</li>
-            </ul>
-        </ul>
-    </section>
+  </section>
+</header>
 
-    <section id="projects" class="projects fade">
-        <h2>Projects</h2>
-        <div class="project">
-            <div class="project-inner">
+<section id="about" class="section">
+  <div class="section-title">
+    <span>01</span>
+    <h2>About Me</h2>
+  </div>
 
-
-                <img src="dashboard.png" width="100%">
-
-                <div class="overlay">
-                    <p>Click to view project 🚀</p>
-                </div>
-
-                <h3>Student Productivity Dashboard</h3>
-                <p>Manage tasks, expenses, and study time with analytics.</p>
-
-                <div class="project-buttons">
-                    <a href="https://mayankjha-ctrl.github.io/student-productivity-dashboard/" target="_blank"
-                        class="btn live">Live Demo</a>
-
-                    <a href="https://github.com/MAYANKJHA-CTRL/student-productivity-dashboard" target="_blank"
-                        class="btn github">GitHub</a>
-                </div>
-            </div>
-
-        </div>
-        <div class="project">
-            <div class="project-inner">
-
-
-                <img src="expense.png" width="100%">
-
-                <h3>Expense Tracker</h3>
-                <p>Track daily expenses with total calculation.</p>
-
-                <div class="project-buttons">
-                    <a href="https://mayankjha-ctrl.github.io/expense-tracker-web/" target="_blank"
-                        class="btn live">Live
-                        Demo</a>
-
-                    <a href="https://github.com/MAYANKJHA-CTRL/expense-tracker-web" target="_blank"
-                        class="btn github">GitHub</a>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <section class="fade">
-        <h2>Why Hire Me?</h2>
-        <p>
-            I build real-world projects, focus on clean UI, and continuously improve my skills.
-        </p>
-    </section>
-    <section class="fade">
-        <h2>My Journey</h2>
-        <p>
-            From learning basic HTML to building real-world dashboards,
-            I continuously push myself to create better, faster, and smarter solutions.
-        </p>
-    </section>
-
-    <section id="contact" class="contact fade">
-
-        <h2>Contact Me</h2>
-
-        <p>📞 Contact: +91 8987488115</p>
-        <p>Email: ahjknayam@gmail.com</p>
-
-        <a href="https://github.com/MAYANKJHA-CTRL" target="_blank" class="btn">
-            💻 GitHub
-        </a>
-
-        <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" class="btn">
-            🔗 LinkedIn
-        </a>
-    </section>
-    <footer>
-        <p>
-            © 2026 Mayank Jha | Built using HTML, CSS, JavaScript & AI-assisted development tools. Also Built with ❤️.
-        </p>
-    </footer>
-    <script>
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                }
-            });
-        });
-
-        document.querySelectorAll(".fade").forEach(el => observer.observe(el));
-    </script>
-    <script>
-        document.querySelectorAll('.project').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                card.style.setProperty('--x', `${e.clientX - rect.left}px`);
-                card.style.setProperty('--y', `${e.clientY - rect.top}px`);
-            });
-        });
-    </script>
-    <script>
-
-        const text = "Hi, I'm Mayank 👋";
-        let i = 0;
-
-        function type() {
-            if (i < text.length) {
-                document.getElementById("typing").innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, 50);
-            }
-        }
-        type();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
-    <script>
-        tsParticles.load("tsparticles", {
-            particles: {
-                number: { value: 50 },
-                size: { value: 2 },
-                move: { speed: 1 },
-                links: { enable: true },
-            }
-        });
-    </script>
-    <script>
-        let count = 0;
-        const target = 10;
-        const counter = document.getElementById("counter");
-
-        const interval = setInterval(() => {
-            count++;
-            counter.innerText = count;
-            if (count === target) clearInterval(interval);
-        }, 100);
-    </script>
-    <script>
-        window.addEventListener("scroll", () => {
-            const scroll = window.scrollY;
-            const height = document.body.scrollHeight - window.innerHeight;
-            document.getElementById("progress").style.width = (scroll / height) * 100 + "%";
-        });
-    </script>
-    <script>
-        document.querySelectorAll(".btn").forEach(btn => {
-            btn.addEventListener("mousemove", e => {
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-
-                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-            });
-
-            btn.addEventListener("mouseleave", () => {
-                btn.style.transform = "translate(0,0)";
-            });
-        });
-    </script>
-    <script>
-        const cursor = document.getElementById("cursor");
-
-        document.addEventListener("mousemove", e => {
-            cursor.style.top = e.clientY + "px";
-            cursor.style.left = e.clientX + "px";
-        });
-    </script>
-    <script>
-        document.querySelectorAll(".project").forEach(card => {
-            const inner = card.querySelector(".project-inner");
-
-            card.addEventListener("mousemove", (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const rotateX = -(y - rect.height / 2) / 10;
-                const rotateY = (x - rect.width / 2) / 10;
-
-                inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            });
-
-            card.addEventListener("mouseleave", () => {
-                inner.style.transform = "rotateX(0deg) rotateY(0deg)";
-            });
-        });
-    </script>
-    <script>
-        document.querySelectorAll(".btn").forEach(btn => {
-            btn.addEventListener("mousemove", e => {
-                const rect = btn.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-
-                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
-            });
-
-            btn.addEventListener("mouseleave", () => {
-                btn.style.transform = "translate(0,0)";
-            });
-        });
-    </script>
-
-</body>
-
+  <div class="about-card">
+    <p>
+      Hi, I’m Mayank Jha, a Computer Science Engineering student passionate about
+      frontend development, modern UI design, and building responsive web applications.
 </html>
