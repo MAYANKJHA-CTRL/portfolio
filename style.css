@@ -13,6 +13,12 @@ body {
   color: white;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
 }
 
 /* BACKGROUND */
@@ -68,12 +74,19 @@ body {
 }
 
 .logo {
-  font-size: 30px;
-  font-weight: 700;
+
+  font-size: 44px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
 
   color: #38f2af;
 
-  letter-spacing: 2px;
+  position: relative;
+
+  text-shadow:
+    0 0 25px rgba(56, 242, 175, 0.25);
 }
 
 .nav-links {
@@ -2087,4 +2100,54 @@ body {
   line-height: 1.4;
 
   color: #f1f5fb;
+}
+
+/* ===== PREMIUM CURSOR RING ===== */
+
+.cursor-ring {
+
+  position: fixed;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(56, 242, 175, 0.5);
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transform:
+    translate(-50%, -50%);
+
+  transition:
+    transform 0.08s linear;
+
+  backdrop-filter: blur(2px);
+}
+
+.cursor-ring::before {
+
+  content: '';
+
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background: #9dffd8;
+
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  box-shadow:
+    0 0 15px rgba(56, 242, 175, 0.7);
 }

@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <div class="cursor-ring"></div>
   <div class="animated-bg">
 
     <span></span>
@@ -34,7 +35,7 @@
   <nav class="navbar">
 
     <div class="logo">
-      MAYANK.
+      MJ.
     </div>
 
     <ul class="nav-links">
@@ -786,6 +787,18 @@
 
       image.style.transform =
         `rotateY(${x}deg) rotateX(${-y}deg)`;
+
+    });
+
+  </script>
+  <script>
+
+    const ring = document.querySelector('.cursor-ring');
+
+    document.addEventListener('mousemove', e => {
+
+      ring.style.left = e.clientX + 'px';
+      ring.style.top = e.clientY + 'px';
 
     });
 
