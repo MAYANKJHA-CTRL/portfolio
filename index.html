@@ -582,6 +582,97 @@
     </div>
 
   </section>
+  <section class="section certifications-section">
+
+    <div class="section-header">
+
+      <p class="section-mini">
+        CERTIFICATIONS
+      </p>
+
+      <h2 class="section-big-title">
+        Credentials Earned
+      </h2>
+
+    </div>
+
+    <div class="certifications-grid">
+
+      <!-- CERT 1 -->
+
+      <div class="cert-card">
+
+        <div class="cert-icon">
+          ✦
+        </div>
+
+        <span class="cert-platform">
+          AMAZON WEB SERVICES
+        </span>
+
+        <h3>
+          Introduction to Generative AI — Art of the Possible
+        </h3>
+
+      </div>
+
+      <!-- CERT 2 -->
+
+      <div class="cert-card">
+
+        <div class="cert-icon">
+          ◉
+        </div>
+
+        <span class="cert-platform">
+          FORAGE
+        </span>
+
+        <h3>
+          Deloitte Australia — Data Analytics Job Simulation
+        </h3>
+
+      </div>
+
+      <!-- CERT 3 -->
+
+      <div class="cert-card">
+
+        <div class="cert-icon">
+          ⚡
+        </div>
+
+        <span class="cert-platform">
+          AI EXPERIENCE
+        </span>
+
+        <h3>
+          AI Data Labelling & Annotation Experience
+        </h3>
+
+      </div>
+
+      <!-- CERT 4 -->
+
+      <div class="cert-card">
+
+        <div class="cert-icon">
+          ⬢
+        </div>
+
+        <span class="cert-platform">
+          FRONTEND DEVELOPMENT
+        </span>
+
+        <h3>
+          Modern Responsive Web Development Projects
+        </h3>
+
+      </div>
+
+    </div>
+
+  </section>
 
   <!-- CONTACT -->
 
@@ -680,6 +771,21 @@
 
       glow.style.left = e.clientX + 'px';
       glow.style.top = e.clientY + 'px';
+
+    });
+
+  </script>
+  <script>
+
+    const image = document.querySelector('.image-wrapper');
+
+    document.addEventListener('mousemove', e => {
+
+      let x = (window.innerWidth / 2 - e.pageX) / 40;
+      let y = (window.innerHeight / 2 - e.pageY) / 40;
+
+      image.style.transform =
+        `rotateY(${x}deg) rotateX(${-y}deg)`;
 
     });
 
