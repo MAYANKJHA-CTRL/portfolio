@@ -795,12 +795,31 @@
 
     const ring = document.querySelector('.cursor-ring');
 
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let ringX = 0;
+    let ringY = 0;
+
     document.addEventListener('mousemove', e => {
 
-      ring.style.left = e.clientX + 'px';
-      ring.style.top = e.clientY + 'px';
+      mouseX = e.clientX;
+      mouseY = e.clientY;
 
     });
+
+    function animateCursor() {
+
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+
+      ring.style.left = ringX + 'px';
+      ring.style.top = ringY + 'px';
+
+      requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
 
   </script>
 
