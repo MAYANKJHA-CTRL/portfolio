@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Mayank Jha | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="animated-bg">
 
-<div class="bg-blur blur1"></div>
-<div class="bg-blur blur2"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
-<header>
+  </div>
+
+  <div class="bg-blur blur1"></div>
+  <div class="bg-blur blur2"></div>
+
+  <!-- NAVBAR -->
+
   <nav class="navbar">
-    <div class="logo">MAYANK.</div>
+
+    <div class="logo">
+      MAYANK.
+    </div>
 
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -26,53 +43,306 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
+
+  <!-- HERO SECTION -->
 
   <section class="hero">
 
-    <div class="hero-left">
-      <p class="mini-title">AVAILABLE FOR OPPORTUNITIES</p>
+    <div class="hero-grid"></div>
 
-      <h1>
-        Mayank<br>
+    <div class="hero-left">
+
+      <p class="availability">
+        AVAILABLE FOR OPPORTUNITIES
+      </p>
+
+      <h1 class="hero-title">
+        Mayank <br>
         Jha
       </h1>
 
-      <h3>Aspiring Full Stack Developer</h3>
+      <h2 class="hero-role">
+        CS Engineer / Frontend Developer
+      </h2>
 
-      <p class="hero-desc">
-        Passionate about building modern responsive web applications with
-        HTML, CSS, JavaScript and AI-assisted development tools.
+      <p class="hero-description">
+        Passionate about building futuristic web experiences,
+        responsive applications, and modern user interfaces
+        using HTML, CSS, JavaScript and AI-assisted tools.
       </p>
 
       <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn">View Projects</a>
-        <a href="resume.pdf" class="btn secondary-btn" target="_blank">Resume</a>
+
+        <a href="#projects" class="hero-btn primary">
+          View Projects
+        </a>
+
+        <a href="resume.pdf" target="_blank" class="hero-btn secondary">
+          Resume
+        </a>
+
       </div>
 
-      <div class="socials">
-        <a href="https://github.com/MAYANKJHA-CTRL" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank">LinkedIn</a>
+      <div class="hero-socials">
+
+        <a href="https://github.com/MAYANKJHA-CTRL" target="_blank">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank">
+          LinkedIn
+        </a>
+
       </div>
+
     </div>
 
     <div class="hero-right">
-      <div class="image-card">
-        <img src="myphoto.jpg" alt="Mayank Jha">
+
+      <div class="image-wrapper">
+
+        <img src="myphoto.jpg" alt="Mayank">
+
       </div>
+
     </div>
 
   </section>
-</header>
 
-<section id="about" class="section">
-  <div class="section-title">
-    <span>01</span>
-    <h2>About Me</h2>
-  </div>
+  <!-- ABOUT -->
 
-  <div class="about-card">
+  <section id="about" class="section">
+
+    <div class="section-title">
+      <span>01</span>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-card">
+
+      <p>
+        Hi, I’m Mayank Jha, a Computer Science Engineering student
+        passionate about frontend development, modern UI design,
+        and creating responsive web applications.
+      </p>
+
+      <div class="about-stats">
+
+        <div class="stat-box">
+          <h3>8.89</h3>
+          <p>CGPA</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>10+</h3>
+          <p>Projects</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>2028</h3>
+          <p>Graduation</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills" class="section">
+
+    <div class="section-title">
+      <span>02</span>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Java</div>
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Responsive Design</div>
+      <div class="skill-card">MERN Stack</div>
+      <div class="skill-card">AI Development</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects" class="section">
+
+    <div class="section-title">
+      <span>03</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+
+        <img src="dashboard.png" alt="Dashboard">
+
+        <div class="project-content">
+
+          <h3>Student Productivity Dashboard</h3>
+
+          <p>
+            Responsive dashboard for tasks, expenses and analytics.
+          </p>
+
+          <div class="project-buttons">
+
+            <a href="https://mayankjha-ctrl.github.io/student-productivity-dashboard/" target="_blank">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/MAYANKJHA-CTRL/student-productivity-dashboard" target="_blank">
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="project-card">
+
+        <img src="expense.png" alt="Expense Tracker">
+
+        <div class="project-content">
+
+          <h3>Expense Tracker</h3>
+
+          <p>
+            Track and organize daily expenses using modern UI.
+          </p>
+
+          <div class="project-buttons">
+
+            <a href="https://mayankjha-ctrl.github.io/expense-tracker-web/" target="_blank">
+              Live Demo
+            </a>
+
+            <a href="https://github.com/MAYANKJHA-CTRL/expense-tracker-web" target="_blank">
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section class="section">
+
+    <div class="section-title">
+      <span>04</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="experience-card">
+
+      <h3>InAmigos Foundation</h3>
+
+      <p>
+        Working on AI-assisted web development projects,
+        portfolio building and frontend UI enhancement.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="section">
+
+    <div class="section-title">
+      <span>05</span>
+      <h2>Contact</h2>
+    </div>
+
+    <div class="contact-card">
+
+      <p><strong>Email:</strong> ahjknayam@gmail.com</p>
+
+      <p><strong>Phone:</strong> +91 8987488115</p>
+
+      <div class="contact-buttons">
+
+        <a href="mailto:ahjknayam@gmail.com">
+          Send Email
+        </a>
+
+        <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
     <p>
-      Hi, I’m Mayank Jha, a Computer Science Engineering student passionate about
-      frontend development, modern UI design, and building responsive web applications.
+      © 2026 Mayank Jha | Built with HTML, CSS & JavaScript
+    </p>
+
+  </footer>
+  <script>
+
+    const observer = new IntersectionObserver(entries => {
+
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+
+      });
+
+    });
+
+    document.querySelectorAll('.section').forEach(sec => {
+      observer.observe(sec);
+    });
+
+  </script>
+  <div class="cursor-glow"></div>
+  <script>
+
+    const glow = document.querySelector('.cursor-glow');
+
+    document.addEventListener('mousemove', e => {
+
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+
+    });
+
+  </script>
+
+</body>
+
 </html>
