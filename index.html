@@ -83,6 +83,15 @@
       <p class="availability">
         AVAILABLE FOR OPPORTUNITIES
       </p>
+      <div class="system-online">
+
+        <span class="online-dot"></span>
+
+        <p>
+          SYSTEM ONLINE
+        </p>
+
+      </div>
 
       <h1 class="hero-title">
         Mayank <br>
@@ -117,7 +126,7 @@
       <div class="hero-socials">
 
         <a href="https://github.com/MAYANKJHA-CTRL" target="_blank">
-          GitHub
+          GitHub ↗
         </a>
 
         <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank">
@@ -141,6 +150,14 @@
     </div>
 
     <div class="hero-right">
+      <div class="orbit">
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JS</span>
+        <span>AI</span>
+
+      </div>
 
       <div class="image-wrapper">
 
@@ -385,6 +402,65 @@
   </section>
 
   <!-- SKILLS -->
+  <section class="status-section">
+
+    <div class="status-header">
+
+      <p class="section-mini">
+        SYSTEM STATUS
+      </p>
+
+      <h2 class="section-big-title">
+        Developer Metrics
+      </h2>
+
+    </div>
+
+    <div class="status-grid">
+
+      <div class="status-card">
+
+        <h3 class="counter" data-target="10">
+          0
+        </h3>
+
+        <p>Projects Built</p>
+
+      </div>
+
+      <div class="status-card">
+
+        <h3 class="counter" data-target="8">
+          0
+        </h3>
+
+        <p>Technologies Explored</p>
+
+      </div>
+
+      <div class="status-card">
+
+        <h3 class="counter" data-target="2028">
+          0
+        </h3>
+
+        <p>Graduation Year</p>
+
+      </div>
+
+      <div class="status-card">
+
+        <h3 class="counter" data-target="889">
+          0
+        </h3>
+
+        <p>Current CGPA ×100</p>
+
+      </div>
+
+    </div>
+
+  </section>
 
   <section id="skills" class="section tech-section">
 
@@ -1041,8 +1117,8 @@
 
     function animateCursor() {
 
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
 
       ring.style.left = ringX + 'px';
       ring.style.top = ringY + 'px';
@@ -1241,6 +1317,46 @@
     });
 
   </script>
+  <script>
+
+    const counters =
+      document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+
+      counter.innerText = '0';
+
+      const updateCounter = () => {
+
+        const target =
+          +counter.getAttribute('data-target');
+
+        const c =
+          +counter.innerText;
+
+        const increment = target / 120;
+
+        if (c < target) {
+
+          counter.innerText =
+            `${Math.ceil(c + increment)}`;
+
+          setTimeout(updateCounter, 20);
+
+        } else {
+
+          counter.innerText = target;
+
+        }
+
+      };
+
+      updateCounter();
+
+    });
+
+  </script>
+  <div class="grid-overlay"></div>
 </body>
 
 </html>
