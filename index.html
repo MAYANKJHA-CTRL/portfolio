@@ -17,6 +17,27 @@
 </head>
 
 <body>
+  <div class="loader">
+
+    <div class="loader-content">
+
+      <h1 class="loader-logo">
+        MJ.
+      </h1>
+
+      <div class="loader-bar">
+
+        <div class="loader-progress"></div>
+
+      </div>
+
+      <p class="loader-text">
+        Initializing Portfolio...
+      </p>
+
+    </div>
+
+  </div>
   <div class="scroll-progress"></div>
   <div class="cursor-ring"></div>
   <div class="animated-bg">
@@ -206,7 +227,39 @@
   </section>
 
   <!-- ABOUT -->
+  <section class="ai-section">
 
+    <div class="ai-card">
+
+      <p class="section-mini">
+        AI MODE
+      </p>
+
+      <h2>
+        JARVIS Interface Activated
+      </h2>
+
+      <p>
+
+        Exploring the intersection of AI,
+        intelligent systems, and modern web
+        engineering through futuristic projects
+        and interactive experiences.
+
+      </p>
+
+      <div class="ai-tags">
+
+        <span>AI Interfaces</span>
+        <span>Voice Assistants</span>
+        <span>Smart Systems</span>
+        <span>Future Tech</span>
+
+      </div>
+
+    </div>
+
+  </section>
   <section id="about" class="section about-premium">
 
     <div class="about-left">
@@ -1155,6 +1208,39 @@
 
   </script>
   <div class="particles"></div>
+  <script>
+
+    window.addEventListener("load", () => {
+
+      const loader =
+        document.querySelector(".loader");
+
+      setTimeout(() => {
+
+        loader.classList.add("hide");
+
+      }, 2600);
+
+    });
+
+  </script>
+  <div class="mouse-trail"></div>
+  <script>
+
+    const trail =
+      document.querySelector(".mouse-trail");
+
+    document.addEventListener("mousemove", e => {
+
+      trail.style.left =
+        e.clientX + "px";
+
+      trail.style.top =
+        e.clientY + "px";
+
+    });
+
+  </script>
 </body>
 
 </html>
