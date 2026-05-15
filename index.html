@@ -69,7 +69,7 @@
       </h1>
 
       <h2 class="hero-role">
-        Frontend Developer • AI Enthusiast • Creative Builder
+        <span class="typing-text"></span>
       </h2>
 
       <p class="hero-description">
@@ -136,6 +136,69 @@
 
       <div class="floating-card card3">
         JavaScript
+      </div>
+
+    </div>
+
+  </section>
+  <section class="terminal-section">
+
+    <div class="terminal-window">
+
+      <div class="terminal-top">
+
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+
+      </div>
+
+      <div class="terminal-body">
+
+        <p>
+          <span class="terminal-user">
+            mayank@portfolio:~$
+          </span>
+          whoami
+        </p>
+
+        <p class="terminal-response">
+          Frontend Developer • AI Enthusiast • Problem Solver
+        </p>
+
+        <p>
+          <span class="terminal-user">
+            mayank@portfolio:~$
+          </span>
+          skills
+        </p>
+
+        <p class="terminal-response">
+          HTML • CSS • JavaScript • Python • Git • MERN
+        </p>
+
+        <p>
+          <span class="terminal-user">
+            mayank@portfolio:~$
+          </span>
+          currently_building
+        </p>
+
+        <p class="terminal-response">
+          AI Voice Assistant + Smart Productivity Systems
+        </p>
+
+        <p>
+          <span class="terminal-user">
+            mayank@portfolio:~$
+          </span>
+          status
+        </p>
+
+        <p class="terminal-response typing-terminal">
+          Building cool things...
+        </p>
+
       </div>
 
     </div>
@@ -393,14 +456,14 @@
           </span>
 
           <h3>
-            Student Productivity Dashboard
+            NeuroFlow Productivity System
           </h3>
-
           <p>
 
-            A futuristic productivity dashboard designed for students
-            to manage tasks, expenses, study analytics and workflow
-            organization through a modern responsive interface.
+            An intelligent productivity platform designed to help students
+            manage workflow, track performance, organize tasks, and
+            visualize productivity metrics through a futuristic dashboard
+            experience.
 
           </p>
 
@@ -450,14 +513,14 @@
           </span>
 
           <h3>
-            Expense Tracker Web App
+            Finova Expense Intelligence
           </h3>
 
           <p>
 
-            A clean and responsive expense management application
-            for tracking daily spending, categorizing expenses,
-            and improving financial organization using modern UI.
+            A modern financial tracking application focused on intuitive
+            expense management, category-based analytics, and clean
+            data visualization for smarter spending decisions.
 
           </p>
 
@@ -852,8 +915,9 @@
 
     <p>
 
-      © 2026 Mayank Jha — Designed & Developed
-      with HTML, CSS, JavaScript and AI-assisted tools.
+      © 2026 Mayank Jha.
+      Building futuristic digital experiences,
+      intelligent interfaces, and modern web products.
 
     </p>
 
@@ -996,7 +1060,101 @@
     });
 
   </script>
+  <script>
 
+    const texts = [
+      "Frontend Developer",
+      "AI Enthusiast",
+      "Creative Builder",
+      "Future Full Stack Engineer"
+    ];
+
+    let speed = 100;
+    let textIndex = 0;
+    let charIndex = 0;
+
+    const typingText =
+      document.querySelector(".typing-text");
+
+    function typeEffect() {
+
+      if (charIndex < texts[textIndex].length) {
+
+        typingText.textContent +=
+          texts[textIndex].charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(typeEffect, speed);
+
+      } else {
+
+        setTimeout(eraseEffect, 1500);
+
+      }
+
+    }
+
+    function eraseEffect() {
+
+      if (charIndex > 0) {
+
+        typingText.textContent =
+          texts[textIndex].substring(0, charIndex - 1);
+
+        charIndex--;
+
+        setTimeout(eraseEffect, 50);
+
+      } else {
+
+        textIndex++;
+
+        if (textIndex >= texts.length) {
+          textIndex = 0;
+        }
+
+        setTimeout(typeEffect, 300);
+
+      }
+
+    }
+
+    typeEffect();
+
+  </script>
+  <script>
+
+    const buttons =
+      document.querySelectorAll(".hero-btn");
+
+    buttons.forEach(btn => {
+
+      btn.addEventListener("mousemove", e => {
+
+        const rect = btn.getBoundingClientRect();
+
+        const x =
+          e.clientX - rect.left - rect.width / 2;
+
+        const y =
+          e.clientY - rect.top - rect.height / 2;
+
+        btn.style.transform =
+          `translate(${x * 0.2}px, ${y * 0.2}px)`;
+
+      });
+
+      btn.addEventListener("mouseleave", () => {
+
+        btn.style.transform = "translate(0px,0px)";
+
+      });
+
+    });
+
+  </script>
+  <div class="particles"></div>
 </body>
 
 </html>
