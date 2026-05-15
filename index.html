@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <div class="scroll-progress"></div>
   <div class="cursor-ring"></div>
   <div class="animated-bg">
 
@@ -68,13 +69,16 @@
       </h1>
 
       <h2 class="hero-role">
-        CS Engineer / Frontend Developer
+        Frontend Developer • AI Enthusiast • Creative Builder
       </h2>
 
       <p class="hero-description">
-        Passionate about building futuristic web experiences,
-        responsive applications, and modern user interfaces
-        using HTML, CSS, JavaScript and AI-assisted tools.
+        I build futuristic web experiences, interactive user interfaces,
+        and AI-powered digital products that combine modern design
+        with real-world functionality.
+
+        Currently focused on Full Stack Development, intelligent web apps,
+        and creating projects that feel immersive, fast, and alive.
       </p>
 
       <div class="hero-buttons">
@@ -98,6 +102,18 @@
         <a href="https://www.linkedin.com/in/mayank-jha-ba5934398/" target="_blank">
           LinkedIn
         </a>
+
+        <div class="currently-building">
+
+          <span>Currently Building</span>
+
+          <div class="building-tags">
+            <p>⚡ AI Voice Assistant</p>
+            <p>⚡ Smart Productivity Systems</p>
+            <p>⚡ Full Stack MERN Applications</p>
+          </div>
+
+        </div>
 
       </div>
 
@@ -150,16 +166,19 @@
       <p class="about-text">
 
         I’m Mayank Jha, a Computer Science Engineering student
-        passionate about frontend development, futuristic UI design,
-        and building modern responsive web applications.
+        passionate about building immersive digital experiences,
+        futuristic interfaces, and intelligent web applications.
 
-        I enjoy transforming ideas into visually engaging digital
-        experiences using HTML, CSS, JavaScript, GitHub and
-        AI-assisted development tools.
+        I enjoy turning ideas into real products through design,
+        development, and creative problem solving.
 
-        Currently, I’m expanding my expertise in Full Stack and
-        MERN Stack development while continuously improving
-        my design and problem-solving skills.
+        My current focus is on Full Stack Development, AI-powered
+        applications, modern frontend engineering, and building
+        projects that feel visually premium and technically strong.
+
+        Beyond coding, I’m constantly exploring new technologies,
+        improving my UI/UX thinking, and pushing my projects beyond
+        basic tutorials into real-world experiences.
 
       </p>
 
@@ -915,6 +934,66 @@
     }
 
     animateCursor();
+
+  </script>
+  <script>
+
+    const progressBar =
+      document.querySelector('.scroll-progress');
+
+    window.addEventListener('scroll', () => {
+
+      const scrollTop =
+        document.documentElement.scrollTop;
+
+      const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      const progress =
+        (scrollTop / scrollHeight) * 100;
+
+      progressBar.style.width = progress + '%';
+
+    });
+
+  </script>
+  <script>
+
+    const sections =
+      document.querySelectorAll("section");
+
+    const navLinks =
+      document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+
+      let current = "";
+
+      sections.forEach(section => {
+
+        const sectionTop =
+          section.offsetTop;
+
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute("id");
+        }
+
+      });
+
+      navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href")
+          === `#${current}`) {
+
+          link.classList.add("active");
+        }
+
+      });
+
+    });
 
   </script>
 
